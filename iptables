@@ -1,0 +1,1502 @@
+iptables -P INPUT   DROP
+iptables -P FORWARD DROP
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.35 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.56 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.41/15 --sport 4 --dst 200.150.1.6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.72 --sport 12 --dst 200.150.1.83 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91 --sport 21 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15 --dst 200.150.1.59 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.72 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45/1 --dst 200.150.1.85 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.48/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88 --dst 200.150.1.45 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.31 --sport 17 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.29 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.69/12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.32 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40/2 --dst 200.150.1.47 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.37 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.69 --dst 200.150.1.62 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.70 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13/6 --dst 200.150.1.95 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.82 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.46 --dst 200.150.1.32 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.81 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.39 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.96 --dst 200.150.1.43/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73 --dst 200.150.1.64 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.49 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.65 --dst 200.150.1.30 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.65 --dst 200.150.1.50 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.37 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73 --dst 200.150.1.4 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.86/15 --dst 200.150.1.30/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78/2 --sport 15 --dst 200.150.1.39 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.39 --dst 200.150.1.75 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.20 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4 --dst 200.150.1.58 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.1 --dst 200.150.1.83/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13 --dst 200.150.1.65 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.96 --dst 200.150.1.10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.84 --sport 8 --dst 200.150.1.37 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.38 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57/5 --sport 15 --dst 200.150.1.85 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.83 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.39 --dst 200.150.1.61 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.42 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.86/3 --dst 200.150.1.54 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42/13 --sport 14 --dst 200.150.1.100/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --sport 24 --dst 200.150.1.81 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --sport 1 --dst 200.150.1.58 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.75/10 --dst 200.150.1.94 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.77/13 --sport 12 --dst 200.150.1.40 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.9 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.27 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.24/13 --dst 200.150.1.85 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.52 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.58 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --sport 6 --dst 200.150.1.39 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75 --sport 6 --dst 200.150.1.45 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.64/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.67/6 --dst 200.150.1.79/12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.69 --sport 19 --dst 200.150.1.92/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.16 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --sport 8 --dst 200.150.1.4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.69 --dst 200.150.1.65/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.80/13 --sport 15 --dst 200.150.1.22/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.94/4 --dst 200.150.1.66 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73 --dst 200.150.1.35 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.46 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --sport 10 --dst 200.150.1.21 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.99 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.39 --dst 200.150.1.40/8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58/15 --dst 200.150.1.92 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.56 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.26 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.8 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23 --sport 13 --dst 200.150.1.52 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.43 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.35/1 --sport 22 --dst 200.150.1.52 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.5/13 --dst 200.150.1.91 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63/14 --dst 200.150.1.44/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68/13 --dst 200.150.1.38 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.24 --dst 200.150.1.29 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83/4 --sport 0 --dst 200.150.1.33 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.23 --dst 200.150.1.70 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.89/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.9/1 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59/8 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.46 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.28 --dst 200.150.1.29 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.72 --sport 13 --dst 200.150.1.4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.80 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --dst 200.150.1.54/10 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.32 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.51 --sport 3 --dst 200.150.1.35 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.28 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.32 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.67 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.1 --dst 200.150.1.63 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.96/12 --dst 200.150.1.24 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.36 --dst 200.150.1.81 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.1/2 --dst 200.150.1.62 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.37 --dst 200.150.1.92 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.13 --sport 0 --dst 200.150.1.32 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.76 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.69 --dst 200.150.1.43 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57 --sport 13 --dst 200.150.1.9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.52 --dst 200.150.1.49 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.26 --dst 200.150.1.32/6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.69 --sport 19 --dst 200.150.1.56 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.57 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.13/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.78/8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21 --sport 23 --dst 200.150.1.37 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.4 --dst 200.150.1.36 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.10/2 --sport 4 --dst 200.150.1.52 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30/4 --dst 200.150.1.56 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.82 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.10/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75/11 --dst 200.150.1.64 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.84/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6 --dst 200.150.1.29/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86/3 --dst 200.150.1.24 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20/13 --dst 200.150.1.14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2/9 --dst 200.150.1.35 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.13 --dst 200.150.1.70 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.57/14 --dst 200.150.1.43 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.4/1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.58 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.23 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --sport 23 --dst 200.150.1.36 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78/8 --dst 200.150.1.8/11 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.89 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.61/2 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71/15 --dst 200.150.1.41 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.28 --dst 200.150.1.5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.12 --dst 200.150.1.38/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29 --dst 200.150.1.8/4 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.26 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.68 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.85 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.36 --dst 200.150.1.11/4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.92 --sport 19 --dst 200.150.1.45/13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.50/14 --sport 16 --dst 200.150.1.99 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.49 --dst 200.150.1.21 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13/5 --dst 200.150.1.16 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.33 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.78/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.12 --dst 200.150.1.75 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.32/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.82 --dst 200.150.1.96 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.28 --sport 18 --dst 200.150.1.74 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.24 --sport 10 --dst 200.150.1.66 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45 --dst 200.150.1.31 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.1/15 --dst 200.150.1.16 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.35 --sport 2 --dst 200.150.1.52 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.62 --dst 200.150.1.9/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50 --dst 200.150.1.51/4 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.96 --dst 200.150.1.49 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30/13 --dst 200.150.1.43 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.56 --dst 200.150.1.88 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.4/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.79 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.29/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.69 --dst 200.150.1.76/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.50 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.44 --dst 200.150.1.45 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.22 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40 --dst 200.150.1.75 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6/11 --sport 15 --dst 200.150.1.83/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.37 --dst 200.150.1.3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.52 --sport 8 --dst 200.150.1.97/12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27/6 --dst 200.150.1.100 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.41 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.27/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.98/4 --dst 200.150.1.89 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71/9 --sport 13 --dst 200.150.1.77 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76/12 --dst 200.150.1.29 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83/6 --dst 200.150.1.6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.95 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.22 --sport 20 --dst 200.150.1.3 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.84/4 --dst 200.150.1.47 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.15/15 --dst 200.150.1.2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.1/15 --dst 200.150.1.12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29 --dst 200.150.1.91/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.12/4 --dst 200.150.1.72 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98/7 --dst 200.150.1.78 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22 --sport 6 --dst 200.150.1.1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --sport 3 --dst 200.150.1.47/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17 --sport 11 --dst 200.150.1.68/11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --sport 1 --dst 200.150.1.80/13 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.77 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.79 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.10/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.45 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.43 --dst 200.150.1.27/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.82 --dst 200.150.1.56 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90/10 --dst 200.150.1.94 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.50 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.66/6 --sport 17 --dst 200.150.1.4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56 --sport 2 --dst 200.150.1.99 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.55/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.59 --sport 2 --dst 200.150.1.9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.18 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.5/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68 --sport 14 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29 --sport 2 --dst 200.150.1.51 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.64 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.49 --dst 200.150.1.2 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.21/12 --dst 200.150.1.95/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.60/12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.48/15 --sport 15 --dst 200.150.1.9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59/4 --dst 200.150.1.84 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.92 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79/15 --sport 13 --dst 200.150.1.91 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --sport 7 --dst 200.150.1.93/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.93 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.72/2 --sport 7 --dst 200.150.1.49 --dport 5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.12 --dst 200.150.1.26 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.18 --sport 17 --dst 200.150.1.94 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4/3 --dst 200.150.1.70/10 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.25 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.86 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.65/8 --dst 200.150.1.55 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.84/2 --dst 200.150.1.69/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.62 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.98 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45 --dst 200.150.1.30 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --sport 5 --dst 200.150.1.83/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.48 --dport 1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78/12 --dst 200.150.1.39/13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.65/11 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.29 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.24 --dst 200.150.1.51 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.32 --dst 200.150.1.82/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58/4 --dst 200.150.1.26 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.44 --dst 200.150.1.99 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.47 --dst 200.150.1.22 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.41 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.44/13 --sport 21 --dst 200.150.1.67 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.66 --sport 3 --dst 200.150.1.60 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.71/1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.41 --sport 18 --dst 200.150.1.58 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.8/11 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.32 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.40 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.27 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.96 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17 --dst 200.150.1.4 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --sport 3 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.5 --dst 200.150.1.12/2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45 --dst 200.150.1.99 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61/5 --sport 14 --dst 200.150.1.6/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3/2 --dst 200.150.1.76 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50/5 --dst 200.150.1.15 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.59 --dst 200.150.1.50 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.99/6 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.82/2 --dst 200.150.1.18 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.57 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15/12 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55/4 --dst 200.150.1.62 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.34 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.15/2 --sport 16 --dst 200.150.1.22/11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.6/14 --dst 200.150.1.65/4 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.54/5 --dst 200.150.1.62 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.43 --sport 5 --dst 200.150.1.67 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.58 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56/6 --dst 200.150.1.22 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.36 --sport 14 --dst 200.150.1.76 --dport 1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.87 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13/2 --dst 200.150.1.91 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74/13 --sport 14 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.80/15 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.25 --dst 200.150.1.98 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.11 --sport 16 --dst 200.150.1.97 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.95/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.7/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.67/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.12 --sport 2 --dst 200.150.1.28/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.73 --dst 200.150.1.89 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79/14 --dst 200.150.1.32 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.38 --sport 20 --dst 200.150.1.7/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.72 --dst 200.150.1.26 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.95 --dst 200.150.1.65 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50 --dst 200.150.1.26 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.51/5 --dst 200.150.1.95 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.18 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.11/14 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.96 --sport 8 --dst 200.150.1.74 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.66 --sport 7 --dst 200.150.1.41 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.15 --sport 0 --dst 200.150.1.48 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22 --dst 200.150.1.65 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.83 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.12 --dst 200.150.1.52 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.22 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68/2 --dst 200.150.1.72 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48/11 --dst 200.150.1.20 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --sport 13 --dst 200.150.1.17/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.37 --sport 16 --dst 200.150.1.43 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.39 --dst 200.150.1.54 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.51 --sport 17 --dst 200.150.1.84 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.16 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6 --sport 6 --dst 200.150.1.78 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74/7 --sport 0 --dst 200.150.1.99 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.72/12 --sport 7 --dst 200.150.1.92/11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.72 --dst 200.150.1.24 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.77/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.39 --dst 200.150.1.57 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.75 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.32 --dst 200.150.1.42 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22/15 --sport 14 --dst 200.150.1.91 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42 --sport 19 --dst 200.150.1.87/3 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71 --sport 0 --dst 200.150.1.53 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.38/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60/10 --dst 200.150.1.85 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.46 --sport 3 --dst 200.150.1.26/3 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.56 --sport 20 --dst 200.150.1.42 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.54 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74 --sport 8 --dst 200.150.1.50 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48/8 --sport 23 --dst 200.150.1.66 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.79/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.28 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.60/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.59/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --sport 20 --dst 200.150.1.25 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.24 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.57 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75/2 --dst 200.150.1.5/4 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20 --sport 12 --dst 200.150.1.23 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.19 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.96 --dst 200.150.1.99 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.80/11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27 --sport 8 --dst 200.150.1.20 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --sport 12 --dst 200.150.1.54/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.49 --dst 200.150.1.84 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.80 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.72 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.37/14 --dst 200.150.1.62 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.36 --dst 200.150.1.95/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.5 --dst 200.150.1.20/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.22 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.73 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.8/13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6/3 --dst 200.150.1.88 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.81/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.67 --dst 200.150.1.95 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.64 --sport 12 --dst 200.150.1.23 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29 --sport 11 --dst 200.150.1.33/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.22 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.19 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.33 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.28/13 --dst 200.150.1.34 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.33 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70/1 --dst 200.150.1.47 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63 --sport 5 --dst 200.150.1.90/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.71 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27/10 --dst 200.150.1.14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.100 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100/2 --sport 12 --dst 200.150.1.22 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.73 --sport 19 --dst 200.150.1.96 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.76 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2/4 --dst 200.150.1.10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.65 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6 --dst 200.150.1.60 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31/8 --dst 200.150.1.49 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.44/8 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.39/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73 --sport 11 --dst 200.150.1.47 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53/1 --dst 200.150.1.10 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.88 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.65/6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20/6 --sport 19 --dst 200.150.1.36 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.71 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.46 --dst 200.150.1.32 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.18 --dst 200.150.1.59 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59 --dst 200.150.1.89/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.77/13 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27/3 --sport 22 --dst 200.150.1.40 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.72 --sport 7 --dst 200.150.1.77 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.83 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.12 --dst 200.150.1.53 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.30 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.56 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.29/10 --dst 200.150.1.39 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.61 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.51 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45/8 --dst 200.150.1.58 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68/14 --sport 15 --dst 200.150.1.87/11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.13 --dst 200.150.1.66/8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.37/5 --dst 200.150.1.100 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40/10 --sport 5 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.87 --dst 200.150.1.45 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31 --sport 4 --dst 200.150.1.89 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.4 --sport 13 --dst 200.150.1.13 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --sport 6 --dst 200.150.1.4/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.72 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.21 --sport 5 --dst 200.150.1.8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17 --sport 14 --dst 200.150.1.23 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.36 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.59/4 --sport 8 --dst 200.150.1.53 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78/15 --sport 14 --dst 200.150.1.34/4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.3 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.69 --sport 9 --dst 200.150.1.11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.13 --sport 23 --dst 200.150.1.64/9 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29 --dst 200.150.1.69 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.43 --dst 200.150.1.93/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.64 --dst 200.150.1.39/8 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.56 --sport 11 --dst 200.150.1.96 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.67/7 --sport 24 --dst 200.150.1.94/15 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.8 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.78 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.54 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.20 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --dst 200.150.1.51 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.25/12 --dst 200.150.1.72 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.12 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.1/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74 --sport 12 --dst 200.150.1.67 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4 --dst 200.150.1.28 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.13/6 --dst 200.150.1.75 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.54/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.65 --sport 11 --dst 200.150.1.34/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.41/6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.35 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98/14 --dst 200.150.1.31 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3/9 --dst 200.150.1.48/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.22 --sport 19 --dst 200.150.1.32/12 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.31 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55/15 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38/13 --sport 3 --dst 200.150.1.10 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.25 --sport 11 --dst 200.150.1.9 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.25 --sport 17 --dst 200.150.1.44 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2 --sport 1 --dst 200.150.1.20 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83/1 --dst 200.150.1.99 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17/4 --dst 200.150.1.8/12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.26 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.16/1 --dst 200.150.1.53 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53 --sport 2 --dst 200.150.1.63 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.65 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.50 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.91 --sport 23 --dst 200.150.1.4 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.55 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.84 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.93/10 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71 --sport 24 --dst 200.150.1.88 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.62 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.38/11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45 --sport 0 --dst 200.150.1.34/2 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86 --sport 3 --dst 200.150.1.98 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77/2 --dst 200.150.1.59/8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.24/5 --sport 17 --dst 200.150.1.51 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.36 --sport 1 --dst 200.150.1.69 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58/6 --dst 200.150.1.62 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.63 --sport 24 --dst 200.150.1.91 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.22 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.18/4 --sport 11 --dst 200.150.1.62/4 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85 --sport 15 --dst 200.150.1.24 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.60 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.38/3 --dst 200.150.1.25 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.19/7 --dst 200.150.1.36 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.52/10 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.91 --dst 200.150.1.93 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.2 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22/13 --dst 200.150.1.35/11 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.8/13 --dst 200.150.1.76/5 --dport 5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.56 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.46 --dst 200.150.1.71 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75 --sport 4 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.4 --dst 200.150.1.10/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.36/5 --sport 22 --dst 200.150.1.22 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.23/10 --dst 200.150.1.77 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.1 --sport 22 --dst 200.150.1.39 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.64 --dst 200.150.1.86/15 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42/1 --dst 200.150.1.53/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.24 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.49 --dst 200.150.1.46 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.45 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.36 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.92 --sport 14 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.5/14 --sport 17 --dst 200.150.1.17/2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33/7 --dst 200.150.1.79 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.89 --sport 22 --dst 200.150.1.86 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.45 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.54 --dst 200.150.1.87 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.82/9 --sport 22 --dst 200.150.1.83 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.16 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60/2 --dst 200.150.1.48 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42/13 --sport 14 --dst 200.150.1.91 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.32 --sport 0 --dst 200.150.1.33 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --sport 9 --dst 200.150.1.78/8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.71/15 --dst 200.150.1.18 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.87/10 --sport 5 --dst 200.150.1.27 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.9/11 --dst 200.150.1.66/11 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.37 --dst 200.150.1.1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.67 --dst 200.150.1.60/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.43 --dst 200.150.1.16 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.71 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.78 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.30 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33 --sport 11 --dst 200.150.1.25 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.5 --dst 200.150.1.6 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.97/10 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2/10 --dst 200.150.1.87 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.67 --dst 200.150.1.24 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21/6 --dst 200.150.1.93 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.26 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.95 --dst 200.150.1.26 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19/3 --dst 200.150.1.9/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.57 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.54 --dst 200.150.1.64 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.32/6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.42/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.66 --dst 200.150.1.3/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.13 --dst 200.150.1.63/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.98 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.52 --sport 3 --dst 200.150.1.97 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34/15 --dst 200.150.1.80 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.66 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.51 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.82 --sport 22 --dst 200.150.1.29 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --sport 18 --dst 200.150.1.86 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.92 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.66 --sport 5 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73 --dst 200.150.1.13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.75/5 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.44 --dst 200.150.1.41 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7 --sport 20 --dst 200.150.1.49 --dport 8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.55/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.49 --dst 200.150.1.82 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.77 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.30 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.66 --dst 200.150.1.88 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73 --dst 200.150.1.40 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83/7 --dst 200.150.1.12/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88 --dst 200.150.1.63 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30/12 --dst 200.150.1.64 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.41 --dst 200.150.1.89 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.19 --sport 16 --dst 200.150.1.11/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --sport 24 --dst 200.150.1.43 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6 --sport 10 --dst 200.150.1.71 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.59 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.40 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.82 --sport 1 --dst 200.150.1.62 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20/14 --dst 200.150.1.4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.66 --sport 6 --dst 200.150.1.32 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.41 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.50/4 --sport 12 --dst 200.150.1.66/6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.28/12 --sport 21 --dst 200.150.1.66 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.43/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.49 --dst 200.150.1.13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33 --sport 18 --dst 200.150.1.99/13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.21 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68/13 --dst 200.150.1.37 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.96 --dst 200.150.1.43 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.85 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.57/14 --dst 200.150.1.91 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.66 --dst 200.150.1.65/12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.97/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.81 --dst 200.150.1.96/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.39 --sport 16 --dst 200.150.1.22 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11/2 --dst 200.150.1.78/4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.52 --dst 200.150.1.65 --dport 8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56 --sport 24 --dst 200.150.1.72/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.96 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86/2 --dst 200.150.1.3/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.44 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.62 --dst 200.150.1.28 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.87 --dst 200.150.1.20 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.31/4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.93 --sport 18 --dst 200.150.1.52 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40/15 --dst 200.150.1.95 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.21 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.95 --dst 200.150.1.94 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.1 --dst 200.150.1.100 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.52 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.32 --dst 200.150.1.94 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.80/12 --dst 200.150.1.92/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --sport 23 --dst 200.150.1.71 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86 --sport 2 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.34 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31 --sport 17 --dst 200.150.1.1 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.77 --sport 6 --dst 200.150.1.19 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.41 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.63 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.66 --dst 200.150.1.68 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.37 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.37 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45 --dst 200.150.1.60 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45/3 --dst 200.150.1.50/8 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.62 --sport 20 --dst 200.150.1.46 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83/6 --dst 200.150.1.58 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7/11 --sport 20 --dst 200.150.1.41 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.79 --sport 11 --dst 200.150.1.95/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.93 --sport 2 --dst 200.150.1.36 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.56/8 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71 --sport 12 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.11/4 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.96 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.26 --dst 200.150.1.25/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.83 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.45 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.81 --dst 200.150.1.100 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.20 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.93 --sport 2 --dst 200.150.1.32/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70 --sport 24 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.65 --dst 200.150.1.38/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.30 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.89 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.44 --dst 200.150.1.23 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33/10 --dst 200.150.1.92 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.25 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.66 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.44 --sport 17 --dst 200.150.1.28/4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.70/2 --dst 200.150.1.23 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.5 --dst 200.150.1.49 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.43 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.57 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.13 --dst 200.150.1.76 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.50/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.96 --dst 200.150.1.80/4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.89/4 --dst 200.150.1.89 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.94/5 --dst 200.150.1.96/11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.100 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.23/9 --dst 200.150.1.24 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.17/4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.37 --sport 5 --dst 200.150.1.89 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.35 --sport 18 --dst 200.150.1.43/13 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.53 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.83 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.91 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.31 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15 --dst 200.150.1.15 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.44 --dst 200.150.1.66/4 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.23/3 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.32 --dst 200.150.1.4/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.28 --sport 8 --dst 200.150.1.9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --sport 1 --dst 200.150.1.54 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.86/3 --dst 200.150.1.66 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.47 --dst 200.150.1.73 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.50/15 --sport 3 --dst 200.150.1.6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.64 --dst 200.150.1.51 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.58/2 --dst 200.150.1.25 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59 --dst 200.150.1.58/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.59 --sport 14 --dst 200.150.1.30 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40 --dst 200.150.1.29 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.38/11 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.31/13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.62/2 --dst 200.150.1.37 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100/12 --dst 200.150.1.80 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.15 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --sport 22 --dst 200.150.1.67 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.31/11 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.52/13 --dst 200.150.1.42 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.27 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.5 --dst 200.150.1.63 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.64 --sport 3 --dst 200.150.1.14 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.85 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.68/12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.16/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.27 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.15 --dst 200.150.1.94 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.98/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.72 --dst 200.150.1.49/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.56 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.95 --dport 8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.81 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.18/6 --dst 200.150.1.98 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.26 --dst 200.150.1.30 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56 --dst 200.150.1.72 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.41 --dst 200.150.1.57 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.56/8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.26 --sport 19 --dst 200.150.1.39 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.52 --sport 4 --dst 200.150.1.55 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13 --dst 200.150.1.49 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.69/7 --dst 200.150.1.34/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.3/10 --sport 14 --dst 200.150.1.42 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75/2 --dst 200.150.1.15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.43 --sport 22 --dst 200.150.1.84/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.100/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60/7 --dst 200.150.1.71 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.69 --dst 200.150.1.61 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --sport 4 --dst 200.150.1.69 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.73 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56/6 --dst 200.150.1.35 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.99 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.12/8 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.52/11 --dst 200.150.1.82/11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.98 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.95 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.12 --sport 9 --dst 200.150.1.10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.54 --sport 4 --dst 200.150.1.29 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56/1 --dst 200.150.1.21 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.49/14 --sport 5 --dst 200.150.1.87 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60/10 --dst 200.150.1.63 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.27 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.41 --dst 200.150.1.11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.28 --dst 200.150.1.61 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.36/2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.71 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.81 --dst 200.150.1.35 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.42 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.14/13 --dst 200.150.1.37 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.36 --sport 12 --dst 200.150.1.46 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.2 --sport 12 --dst 200.150.1.74 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77 --sport 16 --dst 200.150.1.39/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.40/4 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21/2 --sport 3 --dst 200.150.1.3/5 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.54 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.41 --sport 20 --dst 200.150.1.8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45 --sport 20 --dst 200.150.1.14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.14/3 --dst 200.150.1.57 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.94/3 --dst 200.150.1.94 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.47 --dst 200.150.1.26 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59 --dst 200.150.1.59 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15/10 --sport 16 --dst 200.150.1.89 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.5/3 --dst 200.150.1.64 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.75 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.5 --sport 14 --dst 200.150.1.45 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100 --sport 8 --dst 200.150.1.88/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --sport 12 --dst 200.150.1.68 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15 --sport 21 --dst 200.150.1.22 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.65/10 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.57 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.43 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30/5 --sport 18 --dst 200.150.1.84/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50 --sport 3 --dst 200.150.1.58 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.36/9 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.75 --dst 200.150.1.62 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.33 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.53 --sport 24 --dst 200.150.1.30 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.88 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74/1 --dst 200.150.1.4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.36/5 --dst 200.150.1.76/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.27 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77/3 --dst 200.150.1.27 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34/14 --dst 200.150.1.32/6 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73 --sport 14 --dst 200.150.1.15 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.79 --sport 17 --dst 200.150.1.25 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --sport 10 --dst 200.150.1.15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.89/8 --dst 200.150.1.24 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.17 --dport 5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.28 --sport 5 --dst 200.150.1.19 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.17 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.25 --dst 200.150.1.48 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.32 --dst 200.150.1.87 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.67 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83/3 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.50/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.54 --dst 200.150.1.71 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.57/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57/8 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.29 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40/1 --sport 1 --dst 200.150.1.5/13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50 --dst 200.150.1.37/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20/14 --dst 200.150.1.29/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.64 --sport 12 --dst 200.150.1.42/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.88/8 --dst 200.150.1.75 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.19 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.95/9 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.40 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3 --sport 20 --dst 200.150.1.47/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.77 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.34 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.75/4 --dst 200.150.1.57 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.17 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.24 --sport 10 --dst 200.150.1.81/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.39/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.27/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.82 --dst 200.150.1.10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57 --sport 23 --dst 200.150.1.48/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.42/8 --dst 200.150.1.86 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.75 --dst 200.150.1.100 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.85 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.25 --dst 200.150.1.62 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.81 --sport 5 --dst 200.150.1.50/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.72 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.28 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.20 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.24 --sport 16 --dst 200.150.1.94 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4/5 --dst 200.150.1.89 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.95 --dst 200.150.1.9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31/5 --sport 20 --dst 200.150.1.76 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.4 --dst 200.150.1.64 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30 --sport 23 --dst 200.150.1.1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --dst 200.150.1.18 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.68 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.59 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.73/12 --dst 200.150.1.80/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.42 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.48 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.65 --dst 200.150.1.55 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.49/6 --sport 9 --dst 200.150.1.44 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.82 --dst 200.150.1.43/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33/12 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76 --sport 22 --dst 200.150.1.1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.46 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.70/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.72 --dst 200.150.1.22 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21/15 --dst 200.150.1.61/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45/4 --dst 200.150.1.31 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.47/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.23/6 --dst 200.150.1.32 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.66 --dst 200.150.1.48 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.26/6 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56/3 --dst 200.150.1.12/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.94 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.44 --dst 200.150.1.7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.32 --dst 200.150.1.8 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.98 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.44 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60/1 --dst 200.150.1.98 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.89/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.25/8 --dst 200.150.1.32 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31/9 --dst 200.150.1.15/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.41 --sport 13 --dst 200.150.1.21 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --dst 200.150.1.84 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.77/3 --dst 200.150.1.95/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.44 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.95/7 --sport 21 --dst 200.150.1.39 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92/5 --dst 200.150.1.29 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.78 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.37/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.51/10 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6 --dst 200.150.1.1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.52/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.51 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.62/12 --dst 200.150.1.4/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.98/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9/15 --dst 200.150.1.37/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.95/7 --sport 16 --dst 200.150.1.42/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.24 --dst 200.150.1.61/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.57/1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.25 --dst 200.150.1.26/13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.95/13 --dst 200.150.1.93/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --sport 16 --dst 200.150.1.37 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.3 --sport 10 --dst 200.150.1.38/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.18 --dst 200.150.1.51 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.70 --sport 4 --dst 200.150.1.90 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.86 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.34/5 --dst 200.150.1.51 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.69/1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53/12 --dst 200.150.1.71/6 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4 --dst 200.150.1.25 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.20/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --sport 1 --dst 200.150.1.33/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.25/12 --dst 200.150.1.90/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.74 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.62 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.94/13 --dst 200.150.1.15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.12/2 --dst 200.150.1.6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.89 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88/7 --sport 10 --dst 200.150.1.16 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.57 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.82 --sport 6 --dst 200.150.1.100/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.69/15 --dst 200.150.1.38/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15 --dst 200.150.1.29/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.54/11 --dst 200.150.1.33 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33/1 --dst 200.150.1.84 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88 --sport 19 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.1 --dst 200.150.1.69 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.98/4 --sport 21 --dst 200.150.1.67 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.84 --sport 14 --dst 200.150.1.26 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.29 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.94/2 --dst 200.150.1.71/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.94 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.96/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.89 --sport 9 --dst 200.150.1.47/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.66 --sport 14 --dst 200.150.1.6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.94 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.52 --dst 200.150.1.71 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.54 --dst 200.150.1.19 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.4/9 --dst 200.150.1.28/11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.36/5 --dst 200.150.1.88 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.47 --dst 200.150.1.95 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.19/4 --dst 200.150.1.4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.87/1 --dst 200.150.1.36 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.56/2 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.7/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.62 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.72/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.69/15 --dst 200.150.1.64/2 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.52 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11 --sport 15 --dst 200.150.1.31 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70 --sport 0 --dst 200.150.1.96/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --sport 20 --dst 200.150.1.88 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.51 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.87 --dst 200.150.1.90 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.9/13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75 --dst 200.150.1.22 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23 --dst 200.150.1.9 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21/4 --dst 200.150.1.9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.62 --dst 200.150.1.14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.81 --dst 200.150.1.51/3 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91 --dst 200.150.1.27 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.52 --dst 200.150.1.76/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.49 --dst 200.150.1.70 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60/3 --dst 200.150.1.91/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17 --sport 20 --dst 200.150.1.41/9 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.5 --dst 200.150.1.43 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.88 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.31/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.54 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.49/9 --dst 200.150.1.20 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.47 --sport 13 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.39 --dst 200.150.1.61 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.81 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.23 --dst 200.150.1.98 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.12 --sport 23 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.56 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.87/10 --sport 19 --dst 200.150.1.22 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.70 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.63 --sport 3 --dst 200.150.1.33 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.16 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.96 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.80 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.73/5 --sport 17 --dst 200.150.1.52 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.43 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.31 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27/11 --sport 2 --dst 200.150.1.50 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91/11 --dst 200.150.1.86 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.53 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.95 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11 --sport 0 --dst 200.150.1.33/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.18 --dst 200.150.1.3/11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.46 --sport 8 --dst 200.150.1.95 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40/4 --dst 200.150.1.83 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.99 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91/14 --dst 200.150.1.66 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.40 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59/3 --dst 200.150.1.99 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40 --sport 6 --dst 200.150.1.50 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.32 --dst 200.150.1.20 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22 --dst 200.150.1.84 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45/5 --sport 16 --dst 200.150.1.22/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.1 --sport 11 --dst 200.150.1.67 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.100 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.80 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.88/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3/3 --dst 200.150.1.6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --sport 12 --dst 200.150.1.42 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40/13 --sport 10 --dst 200.150.1.87 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.98 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.25/4 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45 --dst 200.150.1.16 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.66/8 --sport 10 --dst 200.150.1.81/3 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13 --sport 2 --dst 200.150.1.45/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74 --sport 3 --dst 200.150.1.57 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20/5 --dst 200.150.1.25 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22 --dst 200.150.1.39 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.37 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75 --dst 200.150.1.45/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.32/15 --dst 200.150.1.37/14 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23 --sport 22 --dst 200.150.1.6 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45 --sport 15 --dst 200.150.1.98/8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.90 --dport 1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.15 --dst 200.150.1.16 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45 --sport 20 --dst 200.150.1.84 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.96 --sport 12 --dst 200.150.1.18 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.90 --sport 6 --dst 200.150.1.27 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.91/11 --dst 200.150.1.67/1 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.19/12 --dst 200.150.1.81 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.91 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.95 --sport 14 --dst 200.150.1.100 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100 --sport 14 --dst 200.150.1.1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.89 --sport 19 --dst 200.150.1.26 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.26/9 --dst 200.150.1.32/11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.1 --dst 200.150.1.95 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.72/14 --dst 200.150.1.44 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.28 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.6/13 --dst 200.150.1.100 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.19/11 --dst 200.150.1.54 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.82 --sport 22 --dst 200.150.1.4/12 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.37 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.76/3 --dst 200.150.1.50 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91 --dst 200.150.1.6/9 --dport 2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.52 --dst 200.150.1.71 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.50 --dst 200.150.1.84 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.53 --sport 2 --dst 200.150.1.72/7 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.96/9 --sport 18 --dst 200.150.1.53 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.1/15 --dst 200.150.1.40 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.34 --sport 11 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.58 --sport 11 --dst 200.150.1.83 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.52 --dst 200.150.1.18 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.22/9 --dst 200.150.1.17 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.64 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.69/4 --dst 200.150.1.34/1 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.82/10 --dst 200.150.1.92 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.73/1 --dst 200.150.1.94 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.47 --sport 17 --dst 200.150.1.75/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.36/10 --sport 22 --dst 200.150.1.8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --sport 19 --dst 200.150.1.72 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.76 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.89 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.54 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.88 --dst 200.150.1.25 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70 --dst 200.150.1.1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17 --dst 200.150.1.77 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30 --sport 9 --dst 200.150.1.17 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15/10 --dst 200.150.1.88 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.2 --sport 24 --dst 200.150.1.38 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.33 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75 --dst 200.150.1.65 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.59 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.85 --sport 13 --dst 200.150.1.100 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.95 --dst 200.150.1.87 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.71 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.47/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.48 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.72 --dst 200.150.1.47 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.64/15 --dst 200.150.1.98 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.62 --dst 200.150.1.53 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.33 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.24 --dst 200.150.1.28 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.88 --dport 1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.57 --sport 23 --dst 200.150.1.92 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.30/4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.25 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.88 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.5 --dst 200.150.1.7/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.81 --dst 200.150.1.5 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.86/7 --dst 200.150.1.55 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.85/12 --sport 16 --dst 200.150.1.18 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17/9 --dst 200.150.1.90 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.85 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.65 --dst 200.150.1.11/9 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56 --dst 200.150.1.68/11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.6/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13 --dst 200.150.1.30 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.39 --dst 200.150.1.29 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.33 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.37 --dst 200.150.1.97/8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.80/1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.47 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.58 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.81 --dst 200.150.1.49 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.56 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.37 --dst 200.150.1.40 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.79 --sport 8 --dst 200.150.1.87/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.96 --dst 200.150.1.63 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27/3 --dst 200.150.1.57 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.87 --dst 200.150.1.8/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.56 --dst 200.150.1.79 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33 --sport 20 --dst 200.150.1.85 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45 --dst 200.150.1.44/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.12 --dst 200.150.1.75 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.8 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.69/4 --dst 200.150.1.26 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29 --dst 200.150.1.45 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.79/1 --dst 200.150.1.83/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.32/10 --dst 200.150.1.61 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --sport 18 --dst 200.150.1.85 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.52/1 --dst 200.150.1.11 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.49 --dst 200.150.1.11/12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13/8 --dst 200.150.1.96 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.84 --sport 21 --dst 200.150.1.4/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.42/10 --dst 200.150.1.21 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.73 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.35 --sport 10 --dst 200.150.1.98 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.90 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.33 --sport 12 --dst 200.150.1.97/11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.57 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.91 --dst 200.150.1.69 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91/5 --dst 200.150.1.80/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.41 --dst 200.150.1.20/11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.67/6 --dst 200.150.1.32 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.40 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.36 --dst 200.150.1.65 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.69 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70/3 --dst 200.150.1.61 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.99 --sport 10 --dst 200.150.1.36/7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91 --dst 200.150.1.14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.82/2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.61 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88/12 --sport 18 --dst 200.150.1.40 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40 --dst 200.150.1.35 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.89/4 --dst 200.150.1.79 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.95 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.67/4 --dst 200.150.1.24/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.22 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.31/4 --dst 200.150.1.19 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.32 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.66 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.7/2 --sport 21 --dst 200.150.1.64 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60 --sport 15 --dst 200.150.1.46 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50/15 --dst 200.150.1.21 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.46 --sport 15 --dst 200.150.1.64 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.94/6 --dst 200.150.1.96 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.30 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.87 --dst 200.150.1.69 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.100 --dport 4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.66 --sport 13 --dst 200.150.1.52 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92/6 --sport 24 --dst 200.150.1.6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.11 --sport 12 --dst 200.150.1.52 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.45 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63/10 --dst 200.150.1.55/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.6 --dst 200.150.1.70 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.18 --dst 200.150.1.19/2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100/5 --dst 200.150.1.52 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73 --sport 9 --dst 200.150.1.16 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.22 --sport 24 --dst 200.150.1.69 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.74/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.99/9 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76/4 --dst 200.150.1.89 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.12 --dst 200.150.1.6 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.2 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76/3 --dst 200.150.1.63 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60 --sport 18 --dst 200.150.1.31/7 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.32 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.77/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --sport 21 --dst 200.150.1.59 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.79 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.55 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.45 --sport 19 --dst 200.150.1.21/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59 --dst 200.150.1.18 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.62 --sport 17 --dst 200.150.1.85 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.49 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.29 --dst 200.150.1.36 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83 --sport 4 --dst 200.150.1.67 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.26/7 --sport 11 --dst 200.150.1.60/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.29 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71/13 --dst 200.150.1.74 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78 --sport 2 --dst 200.150.1.73/12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.28 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75/13 --sport 11 --dst 200.150.1.59 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.57/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.91 --sport 11 --dst 200.150.1.73 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17/4 --dst 200.150.1.48 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.65 --dst 200.150.1.7/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.52 --sport 3 --dst 200.150.1.26 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.42 --sport 9 --dst 200.150.1.36 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.28 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70/11 --sport 10 --dst 200.150.1.10 --dport 5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.67/13 --dst 200.150.1.4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.39 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91/14 --dst 200.150.1.34/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.22/2 --dst 200.150.1.18 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27 --dst 200.150.1.3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.36 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50/4 --sport 14 --dst 200.150.1.20/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.28/1 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.50 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45 --sport 21 --dst 200.150.1.30 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.11/15 --dst 200.150.1.11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.47 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --sport 23 --dst 200.150.1.31 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34/12 --dst 200.150.1.44/8 --dport 1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.4/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.19 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.3/5 --sport 7 --dst 200.150.1.44/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.23 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.81/15 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.50 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27 --sport 6 --dst 200.150.1.98/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.75 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15 --dst 200.150.1.87/12 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.25 --dst 200.150.1.57 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88 --dst 200.150.1.55 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.36 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.79 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56 --dst 200.150.1.11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.1 --dst 200.150.1.28/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.47 --dst 200.150.1.53/2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --dst 200.150.1.4 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.33 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.99/9 --dst 200.150.1.96 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --sport 8 --dst 200.150.1.79/9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.45 --dst 200.150.1.49 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.51 --dst 200.150.1.62 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.36 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.71 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88 --sport 8 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.58/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.79 --sport 14 --dst 200.150.1.78 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68/15 --dst 200.150.1.99 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.40 --dst 200.150.1.54 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.92 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.94 --dst 200.150.1.35/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19/15 --dst 200.150.1.25/10 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.34/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.32/6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4/1 --dst 200.150.1.89 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.72 --sport 16 --dst 200.150.1.27/9 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.18 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59 --sport 21 --dst 200.150.1.5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.73/1 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6 --dst 200.150.1.50 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.99 --dst 200.150.1.21 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.16/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.11 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30/5 --sport 13 --dst 200.150.1.96 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.73 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.28 --dst 200.150.1.64 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.37/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.70/5 --dst 200.150.1.11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.94/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.17 --dst 200.150.1.34 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.99/8 --dst 200.150.1.62 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.73 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.34 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.88 --dst 200.150.1.24 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98/6 --dst 200.150.1.29 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.18 --dst 200.150.1.25 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.96/2 --dst 200.150.1.40 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90/15 --dst 200.150.1.82 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.23/10 --sport 17 --dst 200.150.1.58 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.89 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.16 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.33 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.45 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.71 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.67 --dst 200.150.1.68/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.30/15 --dst 200.150.1.88 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11/3 --dst 200.150.1.68 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.17 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.63 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85/6 --dst 200.150.1.35/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.37/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.39/3 --dst 200.150.1.1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.22 --dst 200.150.1.62 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.5 --dst 200.150.1.19 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.96/8 --dport 14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.3 --sport 8 --dst 200.150.1.35 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.100 --sport 22 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.67 --dst 200.150.1.6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.44 --dst 200.150.1.33 --dport 6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.12 --dst 200.150.1.60 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.26 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29/11 --sport 22 --dst 200.150.1.30 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.77/11 --dst 200.150.1.73/1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.59 --sport 19 --dst 200.150.1.51 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.9 --dst 200.150.1.16/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.35 --dst 200.150.1.45 --dport 1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.18 --dst 200.150.1.92 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.61 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.37 --dst 200.150.1.81 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.93 --dst 200.150.1.19 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.34 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.26/15 --sport 1 --dst 200.150.1.8 --dport 7 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.82/2 --dst 200.150.1.11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.62 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.83/1 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23 --dst 200.150.1.54 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.51 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.4/8 --dst 200.150.1.79 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.71/9 --dst 200.150.1.62 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.92/9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.57/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27/12 --sport 13 --dst 200.150.1.14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.91 --dst 200.150.1.86/3 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.37 --sport 5 --dst 200.150.1.78 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22/9 --dst 200.150.1.57 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.35/13 --dst 200.150.1.47 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3/14 --dst 200.150.1.31/14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.29 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22/11 --dst 200.150.1.12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.26/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.54 --dport 5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.77/2 --dst 200.150.1.69/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.27 --sport 0 --dst 200.150.1.48/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.53/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.49/4 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.72 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.59/11 --dst 200.150.1.29 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.13 --dst 200.150.1.49/6 --dport 14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.41 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.6 --sport 7 --dst 200.150.1.67 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.78 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.97 --dst 200.150.1.14 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.58 --dst 200.150.1.30/12 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.58/1 --dport 9 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.56/15 --dst 200.150.1.40 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.39 --sport 19 --dst 200.150.1.37 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.95/7 --dst 200.150.1.65/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.88 --dst 200.150.1.41/14 --dport 0 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.7/12 --dst 200.150.1.4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.36 --dst 200.150.1.3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23/4 --dst 200.150.1.24 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.10 --dst 200.150.1.76/2 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.98/15 --sport 22 --dst 200.150.1.59 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.62 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74 --sport 24 --dst 200.150.1.66 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.39 --dst 200.150.1.23 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.15/3 --dst 200.150.1.24/15 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.62 --dst 200.150.1.40 --dport 13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20 --sport 23 --dst 200.150.1.93 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.62/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.28 --dst 200.150.1.43 --dport 5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.18 --dst 200.150.1.19/6 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40/1 --sport 16 --dst 200.150.1.61 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22 --dst 200.150.1.24 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.37 --dst 200.150.1.42 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.24/6 --sport 17 --dst 200.150.1.52 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.22 --dst 200.150.1.10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.55 --dport 12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83/3 --dst 200.150.1.84/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59 --dst 200.150.1.3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.76 --dst 200.150.1.93 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78/13 --dst 200.150.1.45 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.23 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.50/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --sport 20 --dst 200.150.1.80/13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.36 --dst 200.150.1.65/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.67 --dst 200.150.1.40 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23 --dst 200.150.1.26 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.98/5 --dst 200.150.1.38 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.59/10 --dst 200.150.1.87 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.85/13 --dst 200.150.1.30 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.18 --dst 200.150.1.61 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74/11 --dst 200.150.1.37 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.74 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.39 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.66/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.31 --dst 200.150.1.2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.78/10 --dst 200.150.1.80 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.14 --sport 21 --dst 200.150.1.18 --dport 11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.64/1 --sport 8 --dst 200.150.1.28 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23 --dst 200.150.1.8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.88 --dst 200.150.1.1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.96/10 --dst 200.150.1.90 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.14 --dst 200.150.1.39/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.67 --dst 200.150.1.26 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.61 --sport 7 --dst 200.150.1.41 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.23 --sport 9 --dst 200.150.1.72/5 --dport 11 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.30 --dst 200.150.1.17/13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --dst 200.150.1.16 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55/7 --dst 200.150.1.48 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.88 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.11/8 --sport 21 --dst 200.150.1.77 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.17/14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.65/7 --sport 0 --dst 200.150.1.35/5 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.49/11 --sport 22 --dst 200.150.1.21 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.19 --dst 200.150.1.46 --dport 1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.62 --dst 200.150.1.2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38/6 --dst 200.150.1.43 --dport 2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.7 --dst 200.150.1.40 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.7 --sport 16 --dst 200.150.1.23/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.95 --dst 200.150.1.94/12 --dport 7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.77/11 --dport 3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.51 --sport 6 --dst 200.150.1.98 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.55 --sport 20 --dst 200.150.1.11/3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.34 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.68 --sport 1 --dst 200.150.1.19 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.2 --dst 200.150.1.14 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --sport 12 --dst 200.150.1.27 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.20 --dst 200.150.1.79/13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.21 --dst 200.150.1.66 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.53 --dst 200.150.1.73 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.82 --dst 200.150.1.3/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.55 --dst 200.150.1.86/11 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.28 --dst 200.150.1.9 --dport 12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.21/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.29 --dst 200.150.1.38 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.3 --sport 0 --dst 200.150.1.16/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.90 --dst 200.150.1.76 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.72 --dst 200.150.1.13 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.42 --dst 200.150.1.48 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.4/7 --dst 200.150.1.55/7 --dport 10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.27/13 --dst 200.150.1.49/15 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33/13 --dst 200.150.1.70 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75/6 --dst 200.150.1.7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.64/4 --dst 200.150.1.8 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.64/13 --dst 200.150.1.36/3 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.24 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.100 --dst 200.150.1.16 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.36 --dst 200.150.1.85/12 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.11 --dst 200.150.1.65/5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.82/9 --dst 200.150.1.96/2 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.24/15 --dst 200.150.1.50 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.67 --dst 200.150.1.91 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.72 --dst 200.150.1.31/14 --dport 0 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.91 --dst 200.150.1.38 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.83 --dst 200.150.1.92 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.17/10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.57 --dst 200.150.1.25 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.24 --dst 200.150.1.88 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.87 --dst 200.150.1.7 --dport 5 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.15 --dst 200.150.1.82 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.77 --dst 200.150.1.37 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.71/13 --dst 200.150.1.51 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.62 --sport 13 --dst 200.150.1.49 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.48 --dst 200.150.1.10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.72 --dst 200.150.1.8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.68/7 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.57 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.48/1 --dst 200.150.1.99 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.81 --sport 3 --dst 200.150.1.40 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.71 --dst 200.150.1.60 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33 --dst 200.150.1.76 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.83/13 --dst 200.150.1.12 --dport 6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.63 --dst 200.150.1.62 --dport 4 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.43 --dst 200.150.1.37/4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.61 --dst 200.150.1.21 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.38 --sport 5 --dst 200.150.1.53 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68/8 --dst 200.150.1.75/12 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.49 --sport 21 --dst 200.150.1.17 --dport 10 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.22 --dst 200.150.1.16 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.84 --dst 200.150.1.12/12 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.59 --dst 200.150.1.23 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.74 --dst 200.150.1.96 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.73 --dst 200.150.1.58 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.52 --dst 200.150.1.63/7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.69 --sport 24 --dst 200.150.1.4 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.49/8 --dst 200.150.1.10/8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.3 --dst 200.150.1.93 --dport 1 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.33 --sport 6 --dst 200.150.1.61 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.90 --sport 19 --dst 200.150.1.17/10 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.4/9 --sport 10 --dst 200.150.1.71 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.89 --dst 200.150.1.92 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.68 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.18 --sport 3 --dst 200.150.1.47/1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.85 --dst 200.150.1.41 --dport 13 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.95/3 --dst 200.150.1.17 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.50 --dst 200.150.1.7 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.16 --dst 200.150.1.94 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.60 --dst 200.150.1.48/6 --dport 1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.51/3 --sport 16 --dst 200.150.1.69 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.85/2 --dst 200.150.1.19 --dport 9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.15 --sport 17 --dst 200.150.1.80 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.75 --dst 200.150.1.59 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.98 --dst 200.150.1.77 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.40 --sport 17 --dst 200.150.1.64 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.91/12 --dst 200.150.1.97 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.38 --dst 200.150.1.87 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.64 --dst 200.150.1.97 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.32 --dst 200.150.1.6 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.8 --dst 200.150.1.1 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.82 --dst 200.150.1.73 --dport 8 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.80 --dst 200.150.1.9 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.5 --sport 13 --dst 200.150.1.29 -j ACCEPT
+iptables -A FORWARD -p tcp --src 192.168.1.92 --dst 200.150.1.44 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.86 --dst 200.150.1.32/5 --dport 3 -j DROP
+iptables -A FORWARD -p tcp --src 192.168.1.78 --sport 15 --dst 200.150.1.5 -j DROP
