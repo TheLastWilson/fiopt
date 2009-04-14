@@ -99,7 +99,45 @@ sub iptables_single
  # if append flag was detected (1) then disect rule for entry into database
  if ($append = 1)
  {
-  print "Append rule: true";
+  #loop though elements in @rule, start at 1 to avoid iptables command, no $i++ to allow if statements to easily skip elements 
+  for ($i = 1; $i < scalar(@rule); $i++)
+  {
+   if ($rule[$i] eq "-A")
+   {
+     $i++;
+     print "Table: $rule[$i]\n";
+   }
+   elsif ($rule[$i] eq "-p")
+   {
+    $i++;
+    print "Protocol: $rule[$i]\n";
+   }
+   elsif ($rule[$i] eq "--src")
+   {
+    $i++;
+    print "Source Address: $rule[$i]\n";
+   }
+   elsif ($rule[$i] eq "--dst")
+   {
+    $i++;
+    print "Destination Address: $rule[$i]\n";
+   }
+   elsif ($rule[$i] eq "-j")
+   {
+    $i++;
+    print "Action: $rule[$i]\n";
+   }
+   else
+   {
+    print "Fatal Error: Element Not Understood ($rule[$i])\n"; 
+   }
+
+  }
+  
+ 
+ 
+ 
+ 
  }
  else
  {
