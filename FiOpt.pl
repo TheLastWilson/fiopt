@@ -83,7 +83,7 @@ ENDHELP
 
 sub iptables_single
 {
- local (@rule, $append, $dPort, $dIP, $sIP, $sPort, $jump);
+ local (@rule, $append);
  print "Insert Single IPtables Rule\n$_[0] \n";
  @rule = split(' ',$_[0]);
  
@@ -97,53 +97,65 @@ sub iptables_single
  }
  
  # if append flag was detected (1) then disect rule for entry into database
- if ($append = 1)
+ if ($append == 1)
  {
-  #loop though elements in @rule, start at 1 to avoid iptables command, no $i++ to allow if statements to easily skip elements 
-  for ($i = 1; $i < scalar(@rule); $i++)
-  {
-   if ($rule[$i] eq "-A")
-   {
-     $i++;
-     print "Table: $rule[$i]\n";
-   }
-   elsif ($rule[$i] eq "-p")
-   {
-    $i++;
-    print "Protocol: $rule[$i]\n";
-   }
-   elsif ($rule[$i] eq "--src")
-   {
-    $i++;
-    print "Source Address: $rule[$i]\n";
-   }
-   elsif ($rule[$i] eq "--dst")
-   {
-    $i++;
-    print "Destination Address: $rule[$i]\n";
-   }
-   elsif ($rule[$i] eq "-j")
-   {
-    $i++;
-    print "Action: $rule[$i]\n";
-   }
-   else
-   {
-    print "Fatal Error: Element Not Understood ($rule[$i])\n"; 
-   }
-
-  }
-  
- 
- 
- 
- 
+   &iptable(@rule);
  }
  else
  {
-  print "Error: single rule entry must contain Append flag (-A)";
+    print "Fatal Error: Element Not Understood ($rule[$i])\n"; 
  }
+
 }
+  
+ 
+
+
+
+ 
+sub iptable
+{
+ # loop though elements in @rule, start at 1 to avoid iptables command, no $i++ to allow if statements to easily skip elements 
+
+ @rule = @_;
+ 
+ for ($i = 1; $i < scalar(@rule); $i++)
+ {
+  if ($rule[$i] eq "-A")
+  {
+   $i++;
+   print "Table: $rule[$i]\n";
+  }
+  elsif ($rule[$i] eq "-p")
+  {
+   $i++;
+   print "Protocol: $rule[$i]\n";
+  }
+  elsif ($rule[$i] eq "--src")
+  {
+   $i++;
+   print "Source Address: $rule[$i]\n";
+  }
+  elsif ($rule[$i] eq "--dst")
+  {
+   $i++;
+   print "Destination Address: $rule[$i]\n";
+  }
+  elsif ($rule[$i] eq "-j")
+  {
+   $i++;
+   print "Action: $rule[$i]\n";
+  }
+  else
+  {
+   print "Fatal Error: Element Not Understood ($rule[$i])\n"; 
+   last;
+  }
+
+
+ } #end for loop
+} #end sub
+
 
 
 
