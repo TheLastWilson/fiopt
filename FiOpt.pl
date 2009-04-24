@@ -31,7 +31,7 @@ if ($ARGV[1] ne "")
    { &help; }
   }
   elsif ($ARGV[1] eq "-f")
-  { print "Linux IpTables Rule File\n"; }
+  { &iptables_file($ARGV[2]); }
   else
   { &help; }
  }
@@ -103,13 +103,23 @@ sub iptables_single
  }
  else
  {
-    print "Fatal Error: Element Not Understood ($rule[$i])\n"; 
+    print "Fatal Error: Append Flag(-A) required for single rule\n"; 
  }
 
 }
   
  
+sub iptables_file
+{
+ open(RULES, $_[0]) or die "$_[0] cannot be opened";
+ @rules = <RULES>;
 
+ foreach $line(@rules)
+ {
+  @rule = split(" ",$line);
+  &iptable(@rule)
+ }
+}
 
 
  
@@ -118,42 +128,118 @@ sub iptable
  # loop though elements in @rule, start at 1 to avoid iptables command, no $i++ to allow if statements to easily skip elements 
 
  @rule = @_;
- 
- for ($i = 1; $i < scalar(@rule); $i++)
+
+
+jump: for ($i = 1; $i < scalar(@rule); $i++)
  {
-  if ($rule[$i] eq "-A")
+  if ($rule[$i] eq "-P")
   {
    $i++;
-   print "Table: $rule[$i]\n";
+#   print "Policy for $rule[$i]: ";
+   $i++;
+   print $rule[$i]."\n";
+  }
+  elsif ($rule[$i] eq "-A")
+  {
+   $i++;
+#   print "Table: $rule[$i]\n";
   }
   elsif ($rule[$i] eq "-p")
   {
    $i++;
-   print "Protocol: $rule[$i]\n";
+   if ($rule[$i]=~m/(TCP|UDP|ICMP|ALL)$/i )
+   { 
+#    print "Protocol: $rule[$i]\n"; 
+   }
+   else
+   { print "Fatal Error: Protocol entry not understood ($rule[$i])\n @rule\n"; last jump; }
   }
   elsif ($rule[$i] eq "--src")
   {
    $i++;
-   print "Source Address: $rule[$i]\n";
+   @address = split("/",$rule[$i]);
+   if ($address[0]=~m/\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/gi )
+   {
+    print "Source IP Address: $address[0]\n";
+   }
+   else
+   { print "Fatal Error: Source IP Address not valid ($address[0])\n @rule\n"; }
+   
+   if($address[1])
+   {
+    if ($address[1] <= 32)
+    { print "Source Network Mask: $address[1]\n"; }
+    else
+    { print "Fatal Error: Source Subnet mask not valid ($address[1])\n @rule\n"; }
+   }
   }
   elsif ($rule[$i] eq "--dst")
   {
    $i++;
-   print "Destination Address: $rule[$i]\n";
+   @address = split("/",$rule[$i]);
+   if ($address[0]=~m/\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/gi )
+   {
+    print "Destination IP Address: $address[0]\n";
+   }
+   else
+   { print "Fatal Error: Destination IP Address not valid ($address[0])\n @rule\n"; }
+
+   if($address[1])
+   {
+    if ($address[1] <= 32)
+    { print "Destination Network Mask: $address[1]\n"; }
+    else
+    { print "Fatal Error: Destination Subnet mask not valid ($address[1])\n @rule\n"; }
+   }
   }
   elsif ($rule[$i] eq "-j")
   {
    $i++;
-   print "Action: $rule[$i]\n";
+   if ($rule[$i]=~m/(DROP|ACCEPT)$/i)
+   {
+#    print "Action: $rule[$i]\n";
+   }
+   else
+   { 
+    print "Fatal Error: Action not understood for -j ($rule[$i])\n @rule\n";
+    last jump; 
+   }
+  }
+  elsif ($rule[$i] eq "--dport")
+  {
+   $i++;
+   if ( $rule[$i] >= 0 && $rule[$i] <= 65535)
+   {
+#    print "Destination Port: $rule[$i]\n";
+   }
+   else
+   {
+    print "Fatal Error: Destination Port not between 0 - 65535 ($rule[$i])\n @rule\n";
+    last jump;
+   }
+  }
+  elsif ($rule[$i] eq "--sport")
+  {
+   $i++;
+   if ($rule[$i] >= 0 && $rule[$i] <= 65535)
+   { 
+#    print "Source Port: $rule[$i]\n";
+   }
+   else
+   {
+    print "Fatal Error: Source Port not between 0 - 65535 ($rule[$i])\n @rule\n";
+    last jump;
+   }
   }
   else
   {
-   print "Fatal Error: Element Not Understood ($rule[$i])\n"; 
-   last;
+   print "Fatal Error: Element Not Understood ($rule[$i])\n @rule\n";
+   last jump;
   }
-
-
  } #end for loop
+
+
+
 } #end sub
 
 
