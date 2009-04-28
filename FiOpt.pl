@@ -6,7 +6,7 @@
 # Contact: CraigAWilson at Gmail.com
 # Homepage: caWilson.co.uk
 #
-#
+
 
 # Assess comand line arguments
 # Format: [Rule Syntax] [input type] [input]
@@ -132,35 +132,35 @@ sub iptable
 
 jump: for ($i = 1; $i < scalar(@rule); $i++)
  {
-  if ($rule[$i] eq "-P")
+  if ($rule[$i] eq "-P") # default policy 
   {
    $i++;
    print "Policy for $rule[$i]: ";
    $i++;
    print "$rule[$i]\n";
   }
-  elsif ($rule[$i] eq "-A")
+  elsif ($rule[$i] eq "-A") # rule table
   {
    $i++;
-#   print "Table: $rule[$i]\n";
+   print "Table: $rule[$i]\n";
   }
-  elsif ($rule[$i] eq "-p")
+  elsif ($rule[$i] eq "-p") # protocol
   {
    $i++;
    if ($rule[$i]=~m/(TCP|UDP|ICMP|ALL)$/i )
    { 
-#    print "Protocol: $rule[$i]\n"; 
+    print "Protocol: $rule[$i]\n"; 
    }
    else
    { print "Fatal Error: Protocol entry not understood ($rule[$i])\n @rule\n"; last jump; }
   }
-  elsif ($rule[$i] eq "--src")
+  elsif ($rule[$i] eq "--src") # source ip address
   {
    $i++;
    @address = split("/",$rule[$i]);
    if ($address[0]=~m/\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/gi )
    {
-#    print "Source IP Address: $address[0]\n";
+    print "Source IP Address: $address[0]\n";
    }
    else
    { print "Fatal Error: Source IP Address not valid ($address[0])\n @rule\n"; }
@@ -169,19 +169,19 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    {
     if ($address[1] <= 32)
     { 
-   #  print "Source Network Mask: $address[1]\n"; 
+     print "Source Network Mask: $address[1]\n"; 
     }
     else
     { print "Fatal Error: Source Subnet mask not valid ($address[1])\n @rule\n"; }
    }
   }
-  elsif ($rule[$i] eq "--dst")
+  elsif ($rule[$i] eq "--dst") # destination address
   {
    $i++;
    @address = split("/",$rule[$i]);
    if ($address[0]=~m/\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/gi )
    {
-#     print "Destination IP Address: $address[0]\n";
+     print "Destination IP Address: $address[0]\n";
    }
    else
    { print "Fatal Error: Destination IP Address not valid ($address[0])\n @rule\n"; }
@@ -190,18 +190,18 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    {
     if ($address[1] <= 32)
     { 
-#     print "Destination Network Mask: $address[1]\n"; 
+     print "Destination Network Mask: $address[1]\n"; 
     }
     else
     { print "Fatal Error: Destination Subnet mask not valid ($address[1])\n @rule\n"; }
    }
   }
-  elsif ($rule[$i] eq "-j")
+  elsif ($rule[$i] eq "-j") #action
   {
    $i++;
    if ($rule[$i]=~m/(DROP|ACCEPT)$/i)
    {
-#    print "Action: $rule[$i]\n";
+    print "Action: $rule[$i]\n";
    }
    else
    { 
@@ -209,12 +209,12 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
     last jump; 
    }
   }
-  elsif ($rule[$i] eq "--dport")
+  elsif ($rule[$i] eq "--dport") #destination port
   {
    $i++;
    if ( $rule[$i] >= 0 && $rule[$i] <= 65535)
    {
-#    print "Destination Port: $rule[$i]\n";
+    print "Destination Port: $rule[$i]\n";
    }
    else
    {
@@ -222,12 +222,12 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
     last jump;
    }
   }
-  elsif ($rule[$i] eq "--sport")
+  elsif ($rule[$i] eq "--sport") #sourcef
   {
    $i++;
    if ($rule[$i] >= 0 && $rule[$i] <= 65535)
    { 
-#    print "Source Port: $rule[$i]\n";
+    print "Source Port: $rule[$i]\n";
    }
    else
    {
@@ -235,16 +235,15 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
     last jump;
    }
   }
-  else
+  else # else means an element not programed for therefore fatal error.
   {
    print "Fatal Error: Element Not Understood ($rule[$i])\n @rule\n";
    last jump;
   }
  } #end for loop
 
-
-
 } #end sub
+
 
 
 
