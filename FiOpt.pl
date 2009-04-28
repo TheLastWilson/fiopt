@@ -21,17 +21,17 @@
 #
 if ($ARGV[1] ne "")
 { 
- if ($ARGV[0] eq "-i")
+ if ($ARGV[0] eq "-i") # -i IPTables
  { 
-  if ($ARGV[1] eq "-r")
+  if ($ARGV[1] eq "-r") # -r = single rule
   { 
-   if ($ARGV[2])
-   { &iptables_single($ARGV[2]); }
+   if ($ARGV[2]) # send to single rule subroutine if rule (next argument) is not null
+   { &iptables_single($ARGV[2]); } # send to single rule subroutine
    else
-   { &help; }
+   { &help; } # issue help to command line frm subroutine
   }
-  elsif ($ARGV[1] eq "-f")
-  { &iptables_file($ARGV[2]); }
+  elsif ($ARGV[1] eq "-f" && $ARGV[2]) # -f = rule file, send to single routine subroutine if file name (next argument) is not null
+  { &iptables_file($ARGV[2]); } #
   else
   { &help; }
  }
@@ -135,9 +135,9 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
   if ($rule[$i] eq "-P")
   {
    $i++;
-#   print "Policy for $rule[$i]: ";
+   print "Policy for $rule[$i]: ";
    $i++;
-   print $rule[$i]."\n";
+   print "$rule[$i]\n";
   }
   elsif ($rule[$i] eq "-A")
   {
@@ -160,7 +160,7 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    @address = split("/",$rule[$i]);
    if ($address[0]=~m/\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/gi )
    {
-    print "Source IP Address: $address[0]\n";
+#    print "Source IP Address: $address[0]\n";
    }
    else
    { print "Fatal Error: Source IP Address not valid ($address[0])\n @rule\n"; }
@@ -168,7 +168,9 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    if($address[1])
    {
     if ($address[1] <= 32)
-    { print "Source Network Mask: $address[1]\n"; }
+    { 
+   #  print "Source Network Mask: $address[1]\n"; 
+    }
     else
     { print "Fatal Error: Source Subnet mask not valid ($address[1])\n @rule\n"; }
    }
@@ -179,7 +181,7 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    @address = split("/",$rule[$i]);
    if ($address[0]=~m/\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/gi )
    {
-    print "Destination IP Address: $address[0]\n";
+#     print "Destination IP Address: $address[0]\n";
    }
    else
    { print "Fatal Error: Destination IP Address not valid ($address[0])\n @rule\n"; }
@@ -187,7 +189,9 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    if($address[1])
    {
     if ($address[1] <= 32)
-    { print "Destination Network Mask: $address[1]\n"; }
+    { 
+#     print "Destination Network Mask: $address[1]\n"; 
+    }
     else
     { print "Fatal Error: Destination Subnet mask not valid ($address[1])\n @rule\n"; }
    }
