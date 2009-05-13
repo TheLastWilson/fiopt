@@ -1,4 +1,5 @@
 #!/usr/bin/perl -w
+#use strict
 # 
 # FiOpt: Firewall Optmisor
 #
@@ -6,6 +7,19 @@
 # Contact: CraigAWilson at Gmail.com
 # Homepage: caWilson.co.uk
 #
+
+
+# Define global variables holding firewall rules
+our @P;		#Protcol
+our @SIP;	#Source IP address
+our @SM;	#Source subnet Mask
+our @SP;	#Source Port
+our @DIP;	#Destination IP address
+our @DM;	#Destination subnet Mask
+our @DP;	#Destination Port
+our @Action;
+
+our @Ruleset = (@SIP, @P, @SM, @SP, @DIP, @DM, @DP, @Action);
 
 
 # Assess comand line arguments
@@ -54,6 +68,21 @@ else
 
 
 
+for ($i=0; $i<=$#{$array[0]};$i++)
+{
+ for ($j=0; $j<=$#array; $j++)
+ {
+  if($array[$j][$i])
+  { print $array[$j][$i],"..."; }
+ }
+ print "\n";
+}
+
+print $array[2][0];
+
+
+
+
 # Subroutine: Help
 #
 # Purpose: Print out help in the event of incorrect or missing command line arguments
@@ -83,11 +112,13 @@ ENDHELP
 
 sub iptables_single
 {
- local (@rule, $append);
+ my @rule;
+ my $append;
  print "Insert Single IPtables Rule\n$_[0] \n";
  @rule = split(' ',$_[0]);
  
  $append = 0; # set append to 0. 0 = no apppend flag, 1 = append flag
+ my $element;
  foreach $element(@rule) 
  {
   if ($element eq '-A')
@@ -112,13 +143,16 @@ sub iptables_single
 sub iptables_file
 {
  open(RULES, $_[0]) or die "$_[0] cannot be opened";
- @rules = <RULES>;
+ my @rules = <RULES>;
 
+ my $line;
+ my @rule;
  foreach $line(@rules)
  {
   @rule = split(" ",$line);
   &iptable(@rule)
  }
+
 }
 
 
@@ -127,9 +161,10 @@ sub iptable
 {
  # loop though elements in @rule, start at 1 to avoid iptables command, no $i++ to allow if statements to easily skip elements 
 
- @rule = @_;
+ my @rule = @_;
 
-
+ my $i;
+ my @address; #temp array for splitting IP address and subnet mask
 jump: for ($i = 1; $i < scalar(@rule); $i++)
  {
   if ($rule[$i] eq "-P") # default policy 
@@ -142,14 +177,15 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
   elsif ($rule[$i] eq "-A") # rule table
   {
    $i++;
-   print "Table: $rule[$i]\n";
+#   print "Table: $rule[$i]\n";
   }
   elsif ($rule[$i] eq "-p") # protocol
   {
    $i++;
    if ($rule[$i]=~m/(TCP|UDP|ICMP|ALL)$/i )
    { 
-    print "Protocol: $rule[$i]\n"; 
+#    print "Protocol: $rule[$i]\n";
+     $ruleset[0][$i] = $rule[$i];
    }
    else
    { print "Fatal Error: Protocol entry not understood ($rule[$i])\n @rule\n"; last jump; }
@@ -160,7 +196,8 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    @address = split("/",$rule[$i]);
    if ($address[0]=~m/\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/gi )
    {
-    print "Source IP Address: $address[0]\n";
+#    print "Source IP Address: $address[0]\n";
+     $ruleset[1][$i]=$address[0];
    }
    else
    { print "Fatal Error: Source IP Address not valid ($address[0])\n @rule\n"; }
@@ -169,7 +206,8 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    {
     if ($address[1] <= 32)
     { 
-     print "Source Network Mask: $address[1]\n"; 
+#     print "Source Network Mask: $address[1]\n"; 
+      $ruleset[2][$i]=$address[1];
     }
     else
     { print "Fatal Error: Source Subnet mask not valid ($address[1])\n @rule\n"; }
@@ -181,7 +219,8 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    @address = split("/",$rule[$i]);
    if ($address[0]=~m/\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b/gi )
    {
-     print "Destination IP Address: $address[0]\n";
+#     print "Destination IP Address: $address[0]\n";
+      $ruleset[4][$i]=$address[0];
    }
    else
    { print "Fatal Error: Destination IP Address not valid ($address[0])\n @rule\n"; }
@@ -190,7 +229,8 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    {
     if ($address[1] <= 32)
     { 
-     print "Destination Network Mask: $address[1]\n"; 
+#     print "Destination Network Mask: $address[1]\n"; 
+      $ruleset[5][$i]=$address[1];     
     }
     else
     { print "Fatal Error: Destination Subnet mask not valid ($address[1])\n @rule\n"; }
@@ -201,7 +241,8 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    $i++;
    if ($rule[$i]=~m/(DROP|ACCEPT)$/i)
    {
-    print "Action: $rule[$i]\n";
+#    print "Action: $rule[$i]\n";
+    $ruleset[7][$i]=$rule[$i];
    }
    else
    { 
@@ -214,7 +255,8 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    $i++;
    if ( $rule[$i] >= 0 && $rule[$i] <= 65535)
    {
-    print "Destination Port: $rule[$i]\n";
+#    print "Destination Port: $rule[$i]\n";
+    $ruleset[6][$i]=$rule[$i];    
    }
    else
    {
@@ -227,7 +269,8 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    $i++;
    if ($rule[$i] >= 0 && $rule[$i] <= 65535)
    { 
-    print "Source Port: $rule[$i]\n";
+#    print "Source Port: $rule[$i]\n";
+     $ruleset[3][$i]=$rule[$i];
    }
    else
    {
@@ -243,15 +286,4 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
  } #end for loop
 
 } #end sub
-
-
-
-
-
-
-
-
-
-
-
 
