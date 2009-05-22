@@ -10,6 +10,8 @@
 
 
 # Define global variables holding firewall rules
+our $die;	#global flag to kill loop
+
 our @P;		#Protcol
 our @SIP;	#Source IP address
 our @SM;	#Source subnet Mask
@@ -66,8 +68,7 @@ else
 { &help; } #if no arguemtns do direct to printing help
 
 
-
-
+#' print out rule set with - inbetween 
 for ($i=0; $i<=$#{$ruleset[0]};$i++)
 {
  for ($j=0; $j<=$#ruleset; $j++)
@@ -110,6 +111,12 @@ sub help
 ENDHELP
 }
 
+
+# Subroutine: iptables_single
+#
+# Purpose: deal with the arugments input for adding a single rule to the ruleset
+#
+# Currently depcriated
 sub iptables_single
 {
 # my @rule;
@@ -140,7 +147,22 @@ sub iptables_single
 print "Needs updating";
 }
   
- 
+# Subroutine: iptables_file
+#
+# Purpose: deal with the arguments input from a rule file and send each rule individually to the parser
+#
+# Variables passed into: 
+# 			File name
+# Variables Returned: 
+#		 	N/A
+# Variables generated:  
+#		 	@rules - iptable file split into lines
+#		 	$line - which line (array element of @rules) the foreach look is on
+#		 	$j - which line number we are on during the foreach loop
+#		 	@rule - the individual rule in $line split into array elements
+# Variables passed to another subroutine
+# 	iptable: 	$j
+# 			\@rule 
 sub iptables_file
 {
  open(RULES, $_[0]) or die "$_[0] cannot be opened";
@@ -149,29 +171,48 @@ sub iptables_file
  my $line;
  my $j = 0; #variable to hold array size so as the value gets the correct location in the array to store the info
  my @rule;
- foreach $line(@rules)
- {
-  @rule = split(" ",$line);
-  &iptable($j, \@rule);
-  $j++;
- }
 
+ $die = 0;
+ foreach $line(@rules) # cycle though rules
+ {
+  if ($die==0)
+  {
+   @rule = split(" ",$line); # split each rule into elements
+   &iptable($j, \@rule); # pass the line number + rule array reference to the iptable subroutine
+   $j++; # incriment the line/rule number
+  }
+ }
 }
 
 
- 
+# Subroutine: iptable
+#
+# Purpose: loop though elements of @rule 
+# notes: start loop counter at 1 allows loop to automatically skip iptables command.
+#
+# Variables Passed into:
+# 			$j - rule number
+# 			\@rule - reference for @rule array
+# Variables Returned:	
+# 			N/A
+# Variables Generated
+# 			$ruleref - temp variable to hold the reference for @rule array. needed?
+# 			$i - for loop counter
+# 			@address - temp array to hold the split up ipaddress and subnet mask fino
+# 			@rule - element created with reference, passed from last routine.
+# Variables returned:	
+# 			N/A
 sub iptable
 {
- # loop though elements in @rule, start at 1 to avoid iptables command, no $i++ to allow if statements to easily skip elements 
 
  my $j = $_[0]; #variable to hold array size so as the value gets the correct location in the array to store the info
  my $ruleref = $_[1];  
  my @rule = @$ruleref;
-
  my $i; #for loop counter for cycling though RULE ELEMENTS
- 
  my @address; #temp array for splitting IP address and subnet mask
-jump: for ($i = 1; $i < scalar(@rule); $i++)
+
+ print $die;
+for ($i = 1; $i < scalar(@rule); $i++)
  {
   if ($rule[$i] eq "-P") # default policy 
   {
@@ -194,7 +235,7 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
      $ruleset[0][$j] = $rule[$i];
    }
    else
-   { print "Fatal Error: Protocol entry not understood ($rule[$i])\n @rule\n"; last jump; }
+   { print "Fatal Error: Protocol entry not understood ($rule[$i])\n @rule\n"; $die = 1;}
   }
   elsif ($rule[$i] eq "--src") # source ip address
   {
@@ -253,7 +294,7 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    else
    { 
     print "Fatal Error: Action not understood for -j ($rule[$i])\n @rule\n";
-    last jump; 
+     
    }
   }
   elsif ($rule[$i] eq "--dport") #destination port
@@ -267,7 +308,7 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    else
    {
     print "Fatal Error: Destination Port not between 0 - 65535 ($rule[$i])\n @rule\n";
-    last jump;
+    
    }
   }
   elsif ($rule[$i] eq "--sport") #sourcef
@@ -281,13 +322,13 @@ jump: for ($i = 1; $i < scalar(@rule); $i++)
    else
    {
     print "Fatal Error: Source Port not between 0 - 65535 ($rule[$i])\n @rule\n";
-    last jump;
+   
    }
   }
   else # else means an element not programed for therefore fatal error.
   {
    print "Fatal Error: Element Not Understood ($rule[$i])\n @rule\n";
-   last jump;
+  
   }
  } #end for loop
 
